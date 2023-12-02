@@ -1,0 +1,1135 @@
+* {
+    /* font-family: 'Nunito', sans-serif,'Athiti', sans-serif; */
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
+}
+
+html {
+    font-size: calc(60% + 0.8vmin);
+}
+
+body,
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+/* ขนาด Font และเงา ที่ navbar */
+nav,nav .navbar-brand {
+    font-size: 1.4em;
+    text-shadow: 0px 0px 10px #fff, 0px 0px 15px #fff;
+}
+p{
+    font-size: 1.3rem !important;
+}
+
+/* navbar background-transition และเบลอ */
+.navbar {
+    background-color: #ffffff05;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+    transition: background .5s;
+}
+
+/* JS เมื่อเลื่อนสุดแบนเนอร์ให้เพิ่มสีดำ */
+.navbar-scrolled {
+    background-color: #151515;
+}
+
+/* Nave link เงา */
+.nav-link {
+    color: #fff;
+    text-shadow: 0 -2px 3px #000;
+    transition: all 0.5s !important;
+}
+
+/* Nav link เมื่อ hover mouse และเลื่อนไปยัง section นั้นให้เพิ่มเงาและเรืองแสง */
+.nav-link:hover,
+nav a.activity {
+    color: #ffffff !important;
+    text-shadow: 0 0 5px #fff,
+        0 0 10px #981989,
+        0 0 20px #981989,
+        0 0 25px #981989,
+        0 0 30px #981989 !important;
+}
+
+.section-title{
+    text-shadow: 0 0 10px #fff;
+    position: relative;
+    font-size: 3rem;
+}
+
+/* ---------- Banner ---------- */
+/* Banner ขนาดและสีและตำแหน่ง อยู่ตรงกลางแนวแกนY*/
+.banner {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background: linear-gradient(125deg, #220555 0%, #631baf 70%);
+    display: flex;
+    align-items: center;
+}
+
+/* ขนาดตัวหนังสือใน Banner และความหนา */
+.banner-text h4 {
+    font-size: clamp(1.3rem, 5vw, 1.9rem);
+}
+
+.banner-text h1 {
+    font-size: clamp(2rem, 5vw, 3.3rem);
+}
+
+.banner-text h3 {
+    font-size: clamp(1.5rem, 5vw, 2.3rem);
+}
+
+/* สีข้อความ เงา ความหนา ข้อความแบนเนอร์*/
+.banner-text * {
+    color: #EBEBEB;
+    /* text-shadow: 0 0 5px #EBEBEB; */
+    font-weight: 500;
+    position: relative;
+    width: fit-content;
+    z-index: 2;
+}
+
+/* Contact Button & transition */
+.btn-contact {
+    padding: .8rem 1.2rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 0 0 10px #EBEBEB;
+    background: transparent;
+    border: 1px solid #000;
+    box-shadow: -3px 2px 5px #000;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.btn-contact::before {
+    content: "";
+    /* background-color: #00e2e0; */
+    background: linear-gradient(to left, #8b63da, #cb98ed);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms;
+    /* display: inline-block; */
+}
+
+/* เอาเมาส์วางแล้ว before กว้างจนเต็ม */
+.btn-contact:hover::before {
+    width: 100%;
+}
+
+/* อนิเมชั่นปุ่มเมื่อนำเม้าส์ไปวาง */
+.btn-contact:hover {
+    border: 1px solid #ce56f6;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #ce56f6, 0 0 20px #ce56f6, 0 0 50px #ce56f6;
+    color: #fff;
+}
+
+/* เมื่อคลิก */
+.btn-contact:active {
+    transform: scale(0.95);
+    transition: .1s;
+}
+
+/* วงกลมหลักที่ครอบวงที่เหลือ */
+.main-cir {
+    margin: 0;
+    /* ขนาดและขอบ */
+    width: 110vh;
+    height: 110vh;
+    border-radius: 50%;
+    /* ตำแหน่ง */
+    position: absolute;
+    right: 2rem;
+    bottom: -6.25rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* วงกลมใหญ่ */
+.big-cir {
+    /* ขนาดและขอบ */
+    width: 110vh;
+    height: 110vh;
+    border-radius: 50%;
+    /* ตำแหน่ง */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* สี */
+    background: #581989;
+
+    animation: anim-big-cir 2.5s;
+}
+
+/* animetion big-cir ค่อยๆขยาย*/
+@keyframes anim-big-cir {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 110vh;
+        height: 110vh;
+    }
+}
+
+
+/* วงกลมกลาง เรืองแสง*/
+.md-cir {
+    width: 75vh;
+    height: 75vh;
+    border-radius: 50%;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAF5FA;
+    box-shadow: 0px 0px 50px 20px #c789da;
+
+    animation: anim-md-cir 2s;
+}
+
+/* animetion medium-cir ค่อยๆขยาย */
+@keyframes anim-md-cir {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 75vh;
+        height: 75vh;
+    }
+}
+
+/* วงเล็ก */
+.sm-cir {
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #2E0965;
+    /* เงาข้างใน */
+    box-shadow: inset 10px 5px 30px 5px #c789da;
+    animation: anim-sm-cir 1.6s;
+}
+
+/* animetion small-cir */
+@keyframes anim-sm-cir {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 50vh;
+        height: 50vh;
+    }
+}
+
+/* ภาพ */
+.banner-me {
+    width: 75vh;
+    border-radius: 50%;
+    position: absolute;
+
+    animation: anim-me 3s;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+/* รูปในแบนเนอร์ เมื่อวางเมาส์ */
+.banner-me:hover {
+    width: 77vh;
+}
+
+/* animetion รูปภาพ*/
+@keyframes anim-me {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        width: 83vh;
+        opacity: 0;
+    }
+
+    100% {
+        width: 75vh;
+        opacity: 1;
+    }
+}
+
+/* ----- ปุ่ม follow ตำแหน่ง และ animation ----- */
+/* ปุ่ม Facebook */
+.facebook-btn {
+    top: 15rem;
+    left: 8rem;
+    animation: anim-fb 3.2s;
+}
+
+@keyframes anim-fb {
+    0% {
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+    }
+
+    40% {
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+    }
+
+    45% {
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    100% {
+        top: 15rem;
+        left: 8rem;
+        z-index: 0;
+        opacity: 1;
+    }
+}
+
+/* ปุ่ม tiktok */
+.tiktok-btn {
+    top: 18rem;
+    right: 7rem;
+    animation: anim-tk 3.3s;
+}
+
+@keyframes anim-tk {
+    0% {
+        top: 50%;
+        right: 50%;
+        z-index: -1;
+    }
+
+    40% {
+        top: 50%;
+        right: 50%;
+        z-index: -1;
+    }
+
+    50% {
+        top: 50%;
+        right: 50%;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    100% {
+        top: 18rem;
+        right: 7rem;
+        z-index: 0;
+        opacity: 1;
+    }
+}
+
+/* ปุ่ม github */
+.github-btn {
+    bottom: 12rem;
+    right: 11rem;
+    animation: anim-gt 3.4s;
+}
+
+@keyframes anim-gt {
+    0% {
+        bottom: 50%;
+        right: 50%;
+        z-index: -1;
+    }
+
+    40% {
+        bottom: 50%;
+        right: 50%;
+        z-index: -1;
+    }
+
+    55% {
+        bottom: 50%;
+        right: 50%;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 12rem;
+        right: 11rem;
+        z-index: 0;
+        opacity: 1;
+    }
+}
+
+/* ปุ่ม Instagram */
+.ig-btn {
+    bottom: 11rem;
+    left: 9rem;
+    animation: anim-ig 3.5s;
+}
+
+@keyframes anim-ig {
+    0% {
+        bottom: 50%;
+        left: 50%;
+        z-index: -1;
+    }
+
+    40% {
+        bottom: 50%;
+        left: 50%;
+        z-index: -1;
+    }
+
+    60% {
+        bottom: 50%;
+        left: 50%;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 11rem;
+        left: 9rem;
+        z-index: 0;
+        opacity: 1;
+    }
+}
+
+/* ขนาด icon ทั้งหมด */
+.icon {
+    width: 15vh;
+}
+
+/* ปุ่ม follow ทั้งหมด */
+.follow-btn * {
+    position: absolute;
+    z-index: 1;
+    transition: all 0.25s, box-shadow 0.5s;
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ปุ่ม follow ทั้งหมด เมื่อวางเมาส์ */
+.follow-btn *:hover {
+    box-shadow: 0 0 0px #cc208e, 0 0 50px #cc208e, 0 0 80px #6713d2, 0 0 100px #6713d2;
+    transform: scale(1.06);
+}
+
+/* icon ปุมเมื่อกด */
+.icon:active {
+    transform: scale(0.95);
+}
+
+/* วงกลมที่ใส่รูป ใช้ทับวงใหญ่ ทำ dark-overlay */
+.dark-overlay-cir {
+    width: 110vh;
+    height: 110vh;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 2rem;
+    bottom: -6.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ขนาดจอ 800px เพิ่ม dark-overlay */
+@media only screen and (max-width: 800px) {
+
+    /* เพิ่ม Dark overlay ที่วงใหญ่ */
+    .dark-overlay-cir {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* ข้อความในแบนเนอร์เป็นสีขาว ขอบดำ */
+    .banner-text * {
+        color: #fff;
+        text-shadow: 0 0 2px #000;
+    }
+}
+
+/* ขนาดจอ 1000px ซ่อนปุ่ม follow */
+@media only screen and (max-width: 1000px) {
+    .follow-btn {
+        visibility: hidden;
+    }
+}
+
+/* --------------- About --------------- */
+/* สี ขนาด ของ about */
+.about {
+    background:#242328;
+    width: 100%;
+    padding: 11rem 2rem 7rem 2rem;
+    color: white;
+}
+
+/* .about h1 {
+    text-shadow: 0 0 10px #fff;
+} */
+
+.about p {
+    /* font-size: 1.13rem; */
+    padding-right: 1rem;
+}
+
+.about-me-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    height: 18rem;
+    box-shadow: 0 0 10px #fff;
+    transition: all .8s;
+}
+
+/* รูปเมื่อวางเมาส์ เรืองแสงสีม่วง */
+.about-me-img img:hover {
+    box-shadow: 0 0 12px #fff, 0 0 30px #ce56f6, inset 0 0 5px #c789da;
+}
+
+/* กล่อง skill เรืองแสง*/
+.skill {
+    background-color: #202350;
+    border-radius: 10px;
+    padding: 1rem;
+    /* padding-bottom: 0; */
+    /* height: 28.5rem; */
+    /* margin: 1rem; */
+    /* max-width: 18rem !important; */
+    box-shadow: 2px 2px 5px #fff, 2px 2px 35px #ce56f6;
+}
+
+.skill h1 {
+    font-size: 2.8rem;
+    text-shadow: 0 0 5px #9d87f7;
+}
+
+/* logo skill */
+.skill img {
+    width: 3rem;
+}
+
+.skill i {
+    font-size: 3.2rem;
+    padding-right: 1rem;
+}
+
+
+/* --------------- Service --------------- */
+
+/* สี ขนาด ของ service */
+.service {
+    background-color: #35353f;
+    width: 100%;
+    padding: 7.75rem 2rem 7rem 2rem;
+    color: white;
+}
+
+/* กล่องที่ครอบกล่องทั้งหมด */
+.boxs {
+    display: grid;
+    /* ช่องว่างระหว่างกล่อง */
+    gap: 1.5rem;
+    /* responsive ขนาดกล่องต่ำกว่า 20rem ตัดบรรทัดใหม่ */
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    padding: 0 auto;
+}
+
+/* ขนาด style ของกล่อง */
+.box {
+    min-width: 21rem;
+    /* max-width: 28rem; */
+    height: 15rem;
+    background-color: #2f2e33;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 8px #fff;
+    position: relative;
+    transition: all 1s;
+}
+
+/* ท้้งหมดในกล่อง layer เป็น 3 */
+.box * {
+    z-index: 3;
+}
+
+/* วงกลมที่อยู่ในกล่อง */
+.item-cir {
+    border-radius: 50%;
+    width: 9rem;
+    height: 9rem;
+    background-color: #faf5fae7;
+    display: flex;
+    justify-content: center;
+
+    color: #000;
+    font-size: 3rem;
+    transition: all 1s;
+    margin: 1.3rem;
+
+    position: relative;
+    /* z-index: 5; */
+}
+
+/* ภาพพื้นหลังในกล่อง */
+.box img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+}
+
+/* พื้นหลัง เพิ่มให้เบลอ และมืดนิดหน่อย */
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff10;
+    backdrop-filter: blur(2px);
+    z-index: 2;
+}
+
+/* icon ที่อยู่ในกล่อง ให้อยู่ตรงกลาง */
+.item-cir * {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    transition: all 1.2s ease;
+    font-style: none;
+}
+
+/* หัวข้อในกล่อง และตำแหน่ง */
+.box h1 {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #000;
+    transition: all 1.2s;
+}
+
+/* รายละเอียดในกล่องที่ถูกซ่อนอยู่ */
+.box p {
+    color: #000;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    margin: 1rem;
+    font-size: 1.9rem;
+    transition: all 1.4s;
+}
+
+/* วางเมาส์ในกล่อง ขยาย เพิ่มเงา */
+.box:hover {
+    /* transform: scale(1.02); */
+    box-shadow: 0 0 15px #fff, 0 0 25px #ce56f6;
+}
+
+/* เป็นสี่เหลี่ยม ขยายพื้นที่จนเต็ม */
+.box:hover .item-cir {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+}
+
+/* icon เลื่อนไปด้านบน */
+.box:hover .item-cir i {
+    position: absolute;
+    top: 10%;
+    transform: translateY(-10%);
+    font-size: 2.5rem;
+}
+
+/* หัวข้อเลื่อนไปด้านบน */
+.box:hover h1 {
+    transition: all 1.5s;
+    color: #000;
+    font-weight: 400;
+    position: absolute;
+    top: 35%;
+    text-shadow: none;
+    transform: translateY(-35%);
+}
+
+/* แสดงรายละเอียดใน tag p และเลื่อนขึ้น */
+.box:hover p {
+    opacity: 1;
+    top: 40%;
+}
+
+/* --------------- Portfolio --------------- */
+
+.portfolio {
+    background-color: #242328;
+    width: 100%;
+    /* height: 50rem; */
+    padding: 7.75rem 2rem 10rem 2rem; 
+    color: white;
+}
+
+.portfolio nav{
+    /* margin: 27 auto 0; */
+    position: relative;
+    /* width: 590px; */
+    width: 100%;
+    overflow-x: scroll;
+    /* overflow-y: auto; */
+    /* height: 50px; */
+    background-color: #34495e;
+    border-radius: 10px 10px 0 0;
+    /* font-size: 0; */
+    white-space: nowrap;
+}
+.portfolio nav::-webkit-scrollbar {
+    height: 0;
+    margin: 5px;
+}
+.portfolio nav button{
+    line-height: 50px;
+    background: none;
+    border: none;
+    height: 100%;
+    font-size: 1.2rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    /* transition: background .5s; */
+}
+.portfolio nav .anim{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    /* background-color: #2b3a55; */
+    background-color: #35353f;
+    transition: all .5s;
+    border-radius: 10px 10px 0 0;
+}
+/* .portfolio button:hover{
+    background: #2b3a55;
+} */
+
+.portfolio button:nth-child(1){
+    width: 90px;
+}
+.portfolio button:nth-child(2){
+    width: 100px;
+}
+.portfolio button:nth-child(3){
+    width: 180px;
+}
+.portfolio button:nth-child(4){
+    width: 150px;
+}
+.portfolio button:nth-child(5){
+    width: 90px;
+}
+
+.portfolio nav .start-all,.portfolio button:nth-child(1):focus~.anim{
+    width: 90px;
+    left: 0;
+}
+.portfolio button:nth-child(2):focus~.anim{
+    width: 110px;
+    left: 90px;
+}
+.portfolio button:nth-child(3):focus~.anim{
+    width: 180px;
+    left: 200px;
+}
+.portfolio button:nth-child(4):focus~.anim{
+    width: 160px;
+    left: 380px;
+}
+.portfolio button:nth-child(5):focus~.anim{
+    width: 90px;
+    left: 540px;
+}
+
+
+.portfolio hr {
+    margin: 0;
+    box-shadow: 0 0 5px #fff;
+}
+
+.menu,
+.port-cards {
+    background-color: #35353f;
+    /* border: 1px solid white;
+    box-shadow: 0 0 10px #ce56fb; */
+}
+
+.portfolio .container>h1 {
+    text-align: end;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.port-cards {
+    height: 28rem;
+    padding: 2rem;
+    overflow-y: scroll;
+    display: grid;
+    gap: 1.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    border-radius: 0 0 10px 10px;
+}
+
+.port-cards::-webkit-scrollbar {
+    width: 5px;
+    background-color: #000;
+    margin: 5px;
+}
+
+.port-cards::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top left, #581989, #ce56fb);
+    border-radius: 10px;
+    /* box-shadow: 3px 15px #fff; */
+    margin: 10px;
+}
+
+.card-subtitle {
+    padding: 0 !important;
+    /* font-size: 3px; */
+}
+
+.title {
+    text-shadow: 1px 1px 3px #000;
+}
+
+.item-card {
+    position: relative;
+    min-width: 14rem;
+    max-width: 24rem;
+    height: 18.5rem;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    /* Hidden by default */
+}
+
+.show {
+    display: block;
+}
+
+.item-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+}
+
+.item-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: all .6s;
+
+}
+
+.text-card {
+    position: absolute;
+    padding: 15px;
+    color: #fff;
+    bottom: 0;
+    transform: translateY(71%);
+    transition: transform 0.3s;
+    z-index: 3;
+}
+
+.text-card h1 {
+    /* font-size: 25px; */
+    font-weight: bold;
+}
+
+.text-card p {
+    padding: 10px 0;
+    font-size: 14px;
+    /* text-align: justify; */
+}
+
+.button-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.text-card button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid #FAF5FA;
+    color: #fff;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.text-card button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.item-card:hover .text-card {
+    transform: translate(0%);
+}
+
+.item-card:hover img {
+    transform: scale(1.2);
+
+}
+
+.item-card:hover::before {
+    opacity: 1;
+}
+
+.menu {
+    padding: .5rem;
+}
+
+.menu button {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    background: none;
+    padding: .5rem;
+    border: none;
+}
+
+.menu button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    /* background: linear-gradient(to right, #30CFD0, #c43ad6); */
+    background: #fff;
+    /* background-color: #7f53ac; */
+    /* background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%); */
+    box-shadow: 0 0 15px #ce56fb;
+    /* box-shadow: 2px 2px 5px #fff, 2px 2px 35px #ce56f6; */
+    /* box-shadow: -1px 3px 10px #ce56f6; */
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.menu button:hover::before,
+button:focus::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* --------------- Contact --------------- */
+.contact {
+    background-color: #24262b;
+    /* background-color: blue; */
+    padding: 5.5rem 3rem 3rem;
+    position: relative;
+}
+
+.contact .profile{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-100%);
+    background-color: #1877F2;
+    border: 8px solid #fff;
+    border-radius: 50%;
+}
+
+/* ลบ li style */
+.contact ul {
+    list-style: none;
+    display: inline;
+}
+
+/* หัวข้อหนา */
+.contact h2 {
+    font-weight: bold;
+    position: relative;
+    color: #fff;
+}
+
+/* เพิ่ม before เป็นเส้นใต้สีม่วงที่หัวข้อ */
+.contact h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: #9d87f7;
+    height: 2px;
+    box-sizing: border-box;
+    width: 70px;
+}
+
+/* link ใน li ลบเส้นใต้ link  */
+.contact ul li a {
+    font-size: 1.2rem;
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+}
+
+/* ระหว่าง li ห่างจากด้านล่าง 10px */
+.contact ul li {
+    margin-bottom: 10px;
+}
+
+/* li ตัวสุดท้ายห่างจากด้านล่าง 2.5rem */
+.contact ul li:last-child {
+    margin-bottom: 2.5rem;
+}
+
+/* contact และ support link เมื่อ hover เปลี่ยนสีเป็นขาว และเลื่อนไปทางขวา 5px */
+.contact-link a:hover,.support-link a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* social link เพิ่มวงครอบ icon */
+.social-link li *{
+    height: 45px;
+    width: 45px;
+    background-color: #737478;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    position: relative;
+    transition: all .5s;
+    z-index: 4;
+}
+
+/* icon facebook เมื่อ hover font เป็นสีฟ้าพื้นหลังขาว */
+.social-link .fa-facebook:hover {
+    color: #1877F2;
+    background-color: #fff;
+}
+
+/* social link li ตัวแรกเพิ่ม after ชื่อติดตาม*/
+.social-link ul li:first-child a::after {
+    content: "TeerapatSuksamang";
+    background-color: #737478;
+    padding: 0 1rem;
+    border-radius: 15px;
+    /* display: inline-block; */
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -5px;
+    /* z-index: 1; */
+    transition: all 0.5s;
+}
+
+/* เมื่อ hover facebook ให้แสดง after และเลื่อนมาทางขวา */
+.social-link ul li:first-child:hover a:after {
+    opacity: 1;
+    left: 33px;
+}
+
+/* พื้นหลังของไล่สี ig ที่อยู่ด้านหลัง */
+.social-link ul li:nth-child(2)::before{
+    content: "";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom left, #4c63d2, #bc3081, #f47133, #fed576);
+    z-index: 3;
+}
+
+/* เมื่อ hover ให้ค่อยๆลบพื้นหลังปัจจุบันและจะเห็นพื้นกลังไล่สีข้างหลัง */
+.social-link ul li:nth-child(2) *:hover{
+    background: none;
+}
+
+/* icon tiktok เมื่อ hover เปลี่ยนสีพื้นหลังและ effect ของต้อกๆ */
+.social-link .fa-tiktok:hover {
+    background-color: #000;
+    text-shadow: 1.5px 1.5px #eb1c50, -1.5px -1.5px #69c7cd;
+}
+
+
+.social-link ul li:nth-child(n+2):nth-child(-n+3) a::before{
+    content: "PedDev";
+    background-color: #737478;
+    padding: 0 1rem;
+    border-radius: 15px;
+    color: #fff;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    transition: all 0.5s;
+    z-index: -2;
+}
+
+.social-link ul li:nth-child(n+2):nth-child(-n+3):hover a::before {
+    opacity: 1;
+    left: 33px;
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teerapat Portfolio</title>
+    <link rel="stylesheet" href="PortStyle.css">
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Nunito:wght@200&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+        <div class="container navbar-content">
+
+            <!-- Logo -->
+            <a href="Index.html" class="navbar-brand ">
+                Teerapat 
+            </a>
+            
+            <!-- ปุ่ม toggler -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- link ใน navbar -->
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link activity">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item n-service">
+                        <a href="#service" class="nav-link">Service</a>
+                     </li>
+                    <li class="nav-item n-portfolio">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item n-contact">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Banner -->
+    <section class="banner section" id="home">
+        <div class="container text-light">
+            <!-- วงกลม -->
+            <div class="main-cir">
+                <div class="big-cir">
+                    <div class="md-cir">
+                        <div class="sm-cir"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ข้อความและปุ่ม -->
+            <div class="banner-text">
+                <h4>Hi</h4>
+                <h1>I'm Teerapat Suksamang</h1>
+                <h3>A Freelance Front-end Developer</h3>
+                <button class="btn-contact ">Contact Us</button>
+            </div>
+
+            <!-- วงกลม overlay -->
+            <div class="dark-overlay-cir">
+                <img src="My.png" alt="" class="banner-me">
+                <div class="follow-btn">
+                    <button class="facebook-btn">
+                        <img src="icon/FB.png" alt="" class="icon">
+                    </button>
+                    <button class="tiktok-btn">
+                        <img src="icon/TK.png" alt="" class="icon">
+                    </button>
+                    <button class="ig-btn">
+                        <img src="icon/IG.png" alt="" class="icon">
+                    </button>
+                    <button class="github-btn">
+                        <img src="icon/GT.png" alt="" class="icon">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-lg-9  pb-5">
+                            <div class="row">
+                                <div class="col-md-4 mb-5 about-me-img">
+                                    <img src="My.png" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <h1 class="section-title">About Me</h1>
+                                    <!-- <p>ผมเป็น Freelance Front-end Web Developer รับเขียนหน้าเว็บไซต์
+                                        ทำให้หน้าเว็บน่าใช้งานด้วย CSS เพิ่มลูกเล่นให้หน้าเว็บไซต์ดูมีชีวิตชีวาด้วย JS
+                                    </p>
+                                    <br> -->
+                                    <p>สวัสดีครับ ผมธีรภัทร สุขสำอางค์ หรือเรียกผมว่ามิกซ์
+                                        ตอนนี้ผมกำลังศึกษาที่วิทยาลัยเทคนิคพระนครศรีอยุธยา
+                                        แผนกเทคโนโลยีสารสนเทศชั้นปวช.ปี2 ผมพึ่งเรียนรู้การเขียนหน้าเว็บไซต์ได้ไม่นานครับ
+                                        ถึงแม้ผมจะพึ่งเริ่มต้นและยังไม่มีประสบการณ์ทำงานมากนักแต่ผมก็มีความตั้งใจอย่างมากที่จะเรียนรู้สิ่งใหม่ๆในสายงานนี้อยู่ตลอดเวลา
+                                        และพร้อมที่จะพัฒนาตัวเองอยู่เสมอครับ
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ad col-12">
+                                <div class="row">
+                                    <p class="col-sm-5 pt-3">Name : Teerapat Suksamang</p>
+                                    <p class="col-sm-6 pt-3">Email : nongmix2550@gmail.com</p>
+                                    <p class="col-sm-5 pt-3">Address : Ayutthaya, Bang Pa-In</p>
+                                    <p class="col-sm-6 pt-3">Phone : 063-850-8500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="skill">
+                                <h1>skill</h1>
+                                <hr>
+                                <h5>Language</h5>
+                                <i class="fa-brands fa-html5" style="color: #e44d26;"></i>
+                                <i class="fa-brands fa-css3-alt" style="color: #2965f1;"></i>
+                                <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+                                <hr>
+                                <h5>CSS Framework</h5>
+                                <i class="fa-brands fa-bootstrap" style="color: #563c7c;"></i>
+                                <hr>
+                                <h5>Text Editor</h5>
+                                <img src="icon/VS.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <section class="service" id="service">
+        <div class="container">
+            <h1 class="section-title">Service</h1>
+            <div class="boxs">
+                <div class="box">
+                    <img src="https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                    <div class="item-cir"><i class="fa-solid fa-code"></i></div>
+                    <h1>Web Development</h1>
+                    <p>สร้างและพัฒนาเว็บไซต์สำหรับแสดงข้อมูล ร้านค้า บริษัท หรือบทความต่างๆ</p>
+                </div>
+                <div class="box">
+                    <img src="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                    <div class="item-cir"><i class="fa-solid fa-pen"></i></i></div>
+                    <h1>Design To Code</h1>
+                    <p>เปลี่ยนจากดีไซน์หน้าเว็บธรรมดาๆที่คุณออกแบบมาเป็นโค้ดเว็บไซต์</p>
+                </div>
+                <div class="box">
+                    <img src="https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                    <div class="item-cir"><i class="fa-solid fa-laptop"></i></i></div>
+                    <h1>Responsive</h1>
+                    <p>ปรับเปลี่ยนหน้าเว็บไซต์ของคุณให้แสดงผลได้เหมาะสมบนอุปกรณ์ขนาดต่างๆ
+                        เพื่อให้ผู้ใช้สามารถใช้งานได้อย่างสะดวกไม่ว่าจะเปิดเว็บไซต์บนอุปกรณ์ใดก็ตาม</p>
+                </div>
+
+                <div class="box">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                    <div class="item-cir"><i class="fa-regular">UX</i></div>
+                    <h1>User Experiense</h1>
+                    <p>ช่วยออกแบบหรือให้คำแนะนำการออกแบบหน้าเว็บไซต์ ใช้งานง่ายไม่ซับซ้อน เพื่อให้ประสบการณ์ที่ดีต่อผู้ใช้งานเว็บไซต์</p>
+                </div>
+                <div class="box">
+                    <img src="https://images.pexels.com/photos/3585088/pexels-photo-3585088.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                    <div class="item-cir"><i class="fa-regular">UI</i></div>
+                    <h1>User Interface</h1>
+                    <p>ช่วยออกแบบหรือให้คำแนะนำการออกแบบหน้าเว็บไซต์ ให้ส่วนต่างๆของเว็บมีความสวยงามและโดดเด่น
+                        มีฟังก์ชั่นที่น่าสนใจเพื่อให้เว็บไซต์น่าใช้งานมากยิ่งขึ้น</p>
+                </div>
+                <div class="box">
+                    <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                    <div class="item-cir"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                    <h1>Web Hosting</h1>
+                    <p>บริการรับนำเว็บไซต์ขึ้นเซิฟเวอร์</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h1 class="section-title">Portfolio</h1>
+            <!-- <div class="menu" id="menu">
+                <button class="menu-btn active" onclick="cardfilter('all')">All</button>
+                <button class="menu-btn" onclick="cardfilter('designtocode')">Design To Code</button>
+                <button class="menu-btn" onclick="cardfilter('blog')">My Blog</button>
+                <button class="menu-btn" onclick="cardfilter('e-commerce')">E-commerce Website</button>
+                <button class="menu-btn" onclick="cardfilter('game')">Web Game</button>
+                <button class="menu-btn" onclick="cardfilter('cat')">My Cat</button>
+            </div> -->
+            <nav>
+                <button class="menu-btn active" onclick="cardfilter('all')">All</button>
+                <button class="menu-btn" onclick="cardfilter('blog')">My Blog</button>
+                <button class="menu-btn" onclick="cardfilter('designtocode')">Design To Code</button>
+                <button class="menu-btn" onclick="cardfilter('cloning')">Web Cloning</button>
+                <button class="menu-btn" onclick="cardfilter('game')">Game</button>
+                <div class="anim start-all"></div>
+            </nav>
+            <!-- <hr> -->
+            <div class="port-cards">
+                <div class="item-card designtocode blog">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/07/07/06/coffeehouse-2600877_960_720.jpg" alt="">
+                    <div class="text-card">
+                        <h2 class="title">Cafe</h2>
+                        <h6 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor,
+                            aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item-card cloning">
+                    <img src="port/netflix.PNG" alt="">
+                    <div class="text-card">
+                        <h2 class="title">Netflix</h2>
+                        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item-card blog">
+                    <img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dnMlMjBjb2RlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                    <div class="text-card">
+                        <h2 class="title">10 Extention</h2>
+                        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item-card cloning">
+                    <img src="port/kfc.PNG" alt="">
+                    <div class="text-card">
+                        <h2 class="title">KFC</h2>
+                        <h6 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor,
+                            aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item-card blog">
+                    <img src="https://cdn.pixabay.com/photo/2015/06/24/16/36/office-820390_640.jpg" alt="">
+                    <div class="text-card">
+                        <h2 class="title">DeskBox</h2>
+                        <h6 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor,
+                            aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item-card blog">
+                    <img src="https://cdn.pixabay.com/photo/2016/03/03/20/19/cat-1234950_640.jpg" alt="">
+                    <div class="text-card">
+                        <h2 class="title">My Cat</h2>
+                        <h6 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor,
+                            aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item-card game">
+                    <img src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_640.jpg" alt="">
+                    <div class="text-card">
+                        <h2 class="title">Flappy Cat</h2>
+                        <h6 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor,
+                            aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+
+                <div class="item-card designtocode">
+                    <img src="https://th.bing.com/th/id/R.805804e65d6c35dafed0bf15dca8a22b?rik=eGcynkxSMnzw2w&pid=ImgRaw&r=0" alt="">
+                    <div class="text-card">
+                        <h2 class="title">Template Coppy</h2>
+                        <h6 class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor,
+                            aperiam.</h6>
+                        <button class="">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="profile"></div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 contact-link">
+                            <h2>Contact Us</h2>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-envelope"></i> nongmix2550@gmail.com</a></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook-messenger"></i> teerapat suksam-ang</a>
+                                </li>
+                                <li><a href="#"><i class="fa-brands fa-line"></i> 063-850-950</a></li>
+                                <li><a href="#"><i class="fa-solid fa-phone"></i> 063-850-950</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6 social-link">
+                            <h2>Follow Us</h2>
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li class="ig-gradient ">
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram "></i>
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 support-link">
+                            <h2>Support Me</h2>
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>My Shop</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+
+</html>
